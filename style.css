@@ -1,0 +1,85 @@
+@font-face {
+  font-family: digital-7;
+  src: url(digital-7.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background-color: #81ecec;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.box{
+  height: 400px;
+  width: 400px;
+  background-color: #fdcb6e;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  overflow: hidden;
+  animation-name: rota;
+  animation-duration: 3s;
+  position: absolute;
+  
+}
+@keyframes rota{
+  0%{transform: rotate(0deg);
+       left: 0;
+  };
+  50%{transform: rotate(180deg);
+  left: 50%;
+  }
+  100%{transform: rotate(360deg);
+       left: 100%;
+  }
+
+}
+.frame{
+  background-color: #34495e;
+  padding: 10px;
+display: flex;
+gap: 10px;
+border-radius:10px ;
+ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;;
+ 
+}
+.hour,.minutes,.colon,.seconds,.millisec{
+  font-size: 40px;
+  font-weight: 500;
+  font-family: digital-7;
+  color: red;
+  background-color: #34495e;
+ text-shadow: -0px -5px 15px rgba(235, 180, 0, 0.5),0px 5px 15px rgba(235, 180, 0, 0.5);
+ width: 40px;
+}
+.buttons button{
+  padding:5px 30px;
+  border: none;
+  user-select: none;
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.start-active,.stop-active{
+     pointer-events: none;
+     opacity: 0.7;
+}
+.start{
+  background-color: #2ecc71;
+}
+.stop{
+  background-color: #e84118;
+}
+.reset{
+  background-color: #fbc531;
+}
